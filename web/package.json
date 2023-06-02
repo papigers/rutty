@@ -1,0 +1,30 @@
+{
+  "name": "rutty-web",
+  "version": "1.0.0",
+  "description": "RuTTY Web App",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "//start": "Using a different HMR port due to issue https://github.com/parcel-bundler/parcel/issues/6994",
+    "start": "parcel --hmr-port 1235",
+    "build": "echo $(pwd); parcel build",
+    "lint": "eslint",
+    "check": "tsc --noEmit",
+    "ci": "yarn build && yarn test && yarn lint && yarn check"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-typescript-tsc": "^2.9.1",
+    "parcel": "^2.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "xterm": "^5.1.0",
+    "xterm-addon-canvas": "^0.3.0",
+    "xterm-addon-fit": "^0.7.0",
+    "xterm-addon-web-links": "^0.8.0",
+    "xterm-addon-webgl": "^0.14.0"
+  }
+}

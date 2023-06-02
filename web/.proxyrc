@@ -1,0 +1,9 @@
+{
+  "/ws": {
+    "target": "http://localhost:3000/",
+    "ws": true
+  },
+  "/config": {
+    "target": "http://localhost:3000/"
+  }
+}

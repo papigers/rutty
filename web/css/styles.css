@@ -1,0 +1,46 @@
+@import 'npm:xterm/css/xterm.css';
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#term {
+  flex: 1;
+  background: #000;
+  color: #fff;
+}
+
+#status {
+  text-align: center;
+  font-size: 0.8em;
+  font-family: Tahoma;
+  color: #fff;
+  padding: 2px;
+}
+
+#status.connecting {
+  color: #cce5ff;
+  background-color: #004085;
+}
+
+#status.connected {
+  color: #d4edda;
+  background-color: #155724;
+}
+
+#status.disconnected {
+  color: #f8d7da;
+  background-color: #721c24;
+}
+
+.xterm .xterm-viewport {
+  overflow: hidden;
+}
