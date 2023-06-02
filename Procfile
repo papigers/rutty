@@ -1,0 +1,1 @@
+web: ./target/release/rutty -p $PORT top
