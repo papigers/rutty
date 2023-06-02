@@ -16,7 +16,7 @@ use crate::{
     command::{self, TerminalSize},
 };
 
-pub async fn handler(
+pub(crate) async fn handler(
     State(config): State<Config>,
     ws: WebSocketUpgrade,
     ConnectInfo(addr): ConnectInfo<SocketAddr>,

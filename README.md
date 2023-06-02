@@ -1,7 +1,7 @@
 # RuTTY - Rust TTY Server
 
 ![Crates.io](https://img.shields.io/crates/v/rutty)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/papigers/rutty/build)
+[![Build](https://github.com/papigers/rutty/actions/workflows/build.yml/badge.svg)](https://github.com/papigers/rutty/actions/workflows/build.yml)
 
 RuTTY (aka Ruthie) is a CLI-powered websocket server written in Rust that allows you to expose your commands via browser.
 RuTTY was written with the sole-purpose of me wanting to expermient with Rust.

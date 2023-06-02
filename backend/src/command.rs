@@ -10,29 +10,29 @@ use tokio_stream::StreamExt;
 use tokio_util::io::ReaderStream;
 use tracing::{debug, error};
 
-pub enum CommandStreamItem {
+pub(crate) enum CommandStreamItem {
     Output(Bytes),
     Error(String),
     Exit(String),
 }
 
 #[derive(Debug, Error)]
-pub enum CommandError {
+pub(crate) enum CommandError {
     #[error("Failed to start command: {0}")]
     Error(String),
 }
 
-pub type CommandStream = Pin<Box<dyn Stream<Item = CommandStreamItem> + Send>>;
-pub type CommandWriter = OwnedWritePty;
+pub(crate) type CommandStream = Pin<Box<dyn Stream<Item = CommandStreamItem> + Send>>;
+pub(crate) type CommandWriter = OwnedWritePty;
 
-pub struct Command {
+pub(crate) struct Command {
     inner: pty_process::Command,
     pty: Option<Pty>,
     child: Option<Child>,
 }
 
 #[derive(Debug, Clone, Copy)]
-pub struct TerminalSize(pub u16, pub u16);
+pub(crate) struct TerminalSize(pub u16, pub u16);
 
 impl TerminalSize {
     pub fn rows(&self) -> u16 {
@@ -50,7 +50,7 @@ impl Into<Size> for TerminalSize {
 }
 
 impl Command {
-    pub fn new(program: &str) -> Command {
+    pub(crate) fn new(program: &str) -> Command {
         Command {
             inner: pty_process::Command::new(program),
             pty: None,
@@ -58,7 +58,7 @@ impl Command {
         }
     }
 
-    pub fn args<I, S>(&mut self, args: I) -> &mut Self
+    pub(crate) fn args<I, S>(&mut self, args: I) -> &mut Self
     where
         I: IntoIterator<Item = S>,
         S: AsRef<std::ffi::OsStr>,
@@ -67,7 +67,7 @@ impl Command {
         self
     }
 
-    pub fn spawn(&mut self, size: Option<TerminalSize>) -> Result<(), CommandError> {
+    pub(crate) fn spawn(&mut self, size: Option<TerminalSize>) -> Result<(), CommandError> {
         let pty = match Pty::new() {
             Ok(it) => it,
             Err(e) => return Result::Err(CommandError::Error(e.to_string())),
@@ -94,7 +94,7 @@ impl Command {
         Ok(())
     }
 
-    pub fn read_and_control(self, aborter: Arc<Notify>) -> (CommandWriter, CommandStream) {
+    pub(crate) fn read_and_control(self, aborter: Arc<Notify>) -> (CommandWriter, CommandStream) {
         let (pty_out, pty_in) = self.pty.unwrap().into_split();
         let mut child = self.child.unwrap();
         let mut out_stream = ReaderStream::new(pty_out);
@@ -135,7 +135,7 @@ impl Command {
         (pty_in, stream)
     }
 
-    pub fn pid(&self) -> Option<u32> {
+    pub(crate) fn pid(&self) -> Option<u32> {
         self.child.as_ref().unwrap().id()
     }
 }

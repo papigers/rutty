@@ -9,7 +9,6 @@ license-file = "LICENSE"
 readme = "README.md"
 keywords = ["tty", "terminal"]
 repository = "https://github.com/papigers/rutty"
-exclude = ["web"]
 # to not ignore backend/static
 include = ["backend/**/*"]
 

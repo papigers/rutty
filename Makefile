@@ -19,7 +19,7 @@ backend/static/index.html: web/dist/$(TARGET)
 	rm -rf backend/static/**/*
 	cp -r web/dist/$(TARGET) backend/static
 
-target/$(TARGET): backend/static/index.html $(wildcard backend/src/**/*) backend/Cargo.toml
+target/$(TARGET): backend/static/index.html $(wildcard backend/src/**/*) Cargo.toml
 	rm -rf target/$(TARGET)
 	cargo build $(CARGO_ARGS)
 

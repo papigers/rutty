@@ -18,7 +18,7 @@ use crate::{
     websocket,
 };
 
-pub async fn start(config: Config) {
+pub(crate) async fn start(config: Config) {
     let app = Router::new()
         .route("/config", get(client_config_handler))
         .route("/ws", get(websocket::handler))

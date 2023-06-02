@@ -5,6 +5,8 @@ mod websocket;
 
 use tracing_subscriber::{prelude::__tracing_subscriber_SubscriberExt, util::SubscriberInitExt};
 
+/// Starts a RuTTY server.
+/// Run rutty -h or refer to [cli::Config] to see usage information.
 #[tokio::main]
 async fn main() {
     tracing_subscriber::registry()
