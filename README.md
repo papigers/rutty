@@ -12,6 +12,10 @@ RuTTY was **heavily** inspired by a very similar tool written in Go, called [GoT
 
 RuTTY run a command for each client connection, forwards the TTY stdout to the client, and forwards the client input to the TTY stdin. RuTTY uses [xterm.js](https://github.com/xtermjs/xterm.js) to show a TTY display on the webpage.
 
+## Installtion
+
+`cargo install rutty`
+
 ## Usage
 
 To run rutty simply run `rutty` and add your command and any optional arguments to that command, e.g. `rutty vi test.txt`.
