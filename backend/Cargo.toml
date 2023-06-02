@@ -5,8 +5,8 @@ edition = "2021"
 authors = ["Gershon Papiashvili"]
 description = "RuTTY - Rust TTY Server"
 documentation = "https://github.com/papigers/rutty/blob/master/README.md"
-license_file = "LICENSE"
-readme = "README.md"
+readme.workspace = true
+license-file.workspace = true
 keywords = ["tty", "terminal"]
 repository = "https://github.com/papigers/rutty"
 

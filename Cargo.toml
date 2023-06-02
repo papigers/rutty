@@ -1,2 +1,6 @@
 [workspace]
 members = ["backend"]
+
+[workspace.package]
+license-file = "LICENSE"
+readme = "README.md"
