@@ -84,5 +84,5 @@ async fn static_handler(uri: Uri) -> impl IntoResponse {
 }
 
 #[derive(RustEmbed)]
-#[folder = "static/"]
+#[folder = "backend/static/"]
 struct Asset;

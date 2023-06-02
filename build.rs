@@ -1,11 +1,11 @@
 use std::process::Command;
 
 fn main() {
+    println!("cargo:rerun-if-changed=static");
     println!("Executing build script to build static files");
 
     match Command::new("make")
         .arg("backend/static/index.html")
-        .current_dir("../")
         .status()
     {
         Ok(_) => {
