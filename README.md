@@ -5,6 +5,8 @@
 
 <img src="web/assets/terminal.png" width="100px" >
 
+[<font size="4">Demo</font>](<http(s)://papigers.github.io/rutty>)
+
 RuTTY (aka Ruthie) is a CLI-powered websocket server written in Rust that allows you to expose your commands via browser.
 RuTTY was written with the sole-purpose of me wanting to expermient with Rust.
 

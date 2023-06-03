@@ -1,0 +1,36 @@
+{
+  "name": "rutty-demo",
+  "version": "0.1.0",
+  "description": "RuTTY Demo",
+  "source": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build",
+    "lint": "eslint",
+    "check": "tsc --noEmit",
+    "ci": "yarn build && yarn test && yarn lint && yarn check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papigers/rutty.git"
+  },
+  "keywords": [
+    "tty",
+    "shell",
+    "rust"
+  ],
+  "author": "Gershon Papiashvili",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/papigers/rutty/issues"
+  },
+  "homepage": "https://github.com/papigers/rutty#readme",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "2.9.1",
+    "@parcel/transformer-typescript-tsc": "^2.9.1",
+    "@parcel/transformer-webmanifest": "2.9.1",
+    "parcel": "^2.9.1",
+    "typescript": "^5.0.4"
+  }
+}
