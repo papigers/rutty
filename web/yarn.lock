@@ -391,6 +391,14 @@
     globals "^13.2.0"
     nullthrows "^1.1.1"
 
+"@parcel/packager-raw-url@2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@parcel/packager-raw-url/-/packager-raw-url-2.9.1.tgz#932dc1a678974ebae75656960cc3c4d4b418f24d"
+  integrity sha512-sS9a9CsYaWtfqaRLLGceRhSVeytC5+4PR1ZrXG+5/wM5kRhBs8kj/jsCmbcc7QXaH7pMAAhg0ahMqX9zf1jXGQ==
+  dependencies:
+    "@parcel/plugin" "2.9.1"
+    "@parcel/utils" "2.9.1"
+
 "@parcel/packager-raw@2.9.1":
   version "2.9.1"
   resolved "https://registry.yarnpkg.com/@parcel/packager-raw/-/packager-raw-2.9.1.tgz#bba90032196d0e7b9730d9029f38fa2e3f998a67"
@@ -646,6 +654,16 @@
     "@parcel/plugin" "2.9.1"
     "@parcel/source-map" "^2.1.1"
     "@parcel/ts-utils" "2.9.1"
+
+"@parcel/transformer-webmanifest@2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-webmanifest/-/transformer-webmanifest-2.9.1.tgz#23f03bdda7760d1f031d1e556e869b82d792f15c"
+  integrity sha512-mnNfDJQBaqkc8S0I9IOHEM0dKRMXNMXcl4vUMCUrcAiNYGcSLaPrSfZqvyuUgc5Lx6T2FCeQ/KzamWBdH3e0PA==
+  dependencies:
+    "@mischnic/json-sourcemap" "^0.1.0"
+    "@parcel/diagnostic" "2.9.1"
+    "@parcel/plugin" "2.9.1"
+    "@parcel/utils" "2.9.1"
 
 "@parcel/ts-utils@2.9.1":
   version "2.9.1"
@@ -1512,11 +1530,6 @@ xterm-addon-web-links@^0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/xterm-addon-web-links/-/xterm-addon-web-links-0.8.0.tgz#2cb1d57129271022569208578b0bf4774e7e6ea9"
   integrity sha512-J4tKngmIu20ytX9SEJjAP3UGksah7iALqBtfTwT9ZnmFHVplCumYQsUJfKuS+JwMhjsjH61YXfndenLNvjRrEw==
-
-xterm-addon-webgl@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/xterm-addon-webgl/-/xterm-addon-webgl-0.14.0.tgz#bd9136710bd5d130a0a51fd42e6d14ea39348236"
-  integrity sha512-zcxL4RVVjeS7NNFeKe5HHQI8OUEx3wZpE4EqLoTVipa2UrTR+qLsigo16UEp/yVcYBMhK7tsJ/AJokoEe/f0mw==
 
 xterm@^5.1.0:
   version "5.1.0"

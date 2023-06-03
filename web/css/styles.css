@@ -9,7 +9,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 #term {
@@ -24,6 +24,7 @@ body {
   font-family: Tahoma;
   color: #fff;
   padding: 2px;
+  z-index: 1;
 }
 
 #status.connecting {
@@ -42,5 +43,5 @@ body {
 }
 
 .xterm .xterm-viewport {
-  overflow: hidden;
+  overflow-y: hidden;
 }
