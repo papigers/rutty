@@ -3,9 +3,9 @@
 [![Crates.io](https://img.shields.io/crates/v/rutty)](https://crates.io/crates/rutty)
 [![Build](https://github.com/papigers/rutty/actions/workflows/build.yml/badge.svg)](https://github.com/papigers/rutty/actions/workflows/build.yml)
 
-<img src="web/assets/terminal.png" width="100px" >
+<img src="web/assets/terminal.png" width="100px">
 
-## [Demo](<http(s)://papigers.github.io/rutty>)
+### [Demo](<https://papigers.github.io/rutty>)
 
 RuTTY (aka Ruthie) is a CLI-powered websocket server written in Rust that allows you to expose your commands via browser.
 RuTTY was written with the sole-purpose of me wanting to expermient with Rust.
